@@ -14,8 +14,8 @@ FROM alpine:latest
 COPY --from=builder /app/target/x86_64-unknown-linux-musl/release/tunnelto_server /tunnelto_server
 
 # Expose required ports
-EXPOSE 8080  # client svc
-EXPOSE 5000  # ctrl svc
-EXPOSE 10002 # net svc
+EXPOSE 8080
+EXPOSE 5000
+EXPOSE 10002
 
 ENTRYPOINT ["/tunnelto_server"]
